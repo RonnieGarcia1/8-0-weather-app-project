@@ -1,0 +1,62 @@
+body, html{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 12px;
+}
+
+#main-wrapper{
+    /* text-align: center; */
+    margin: 0 auto;
+    display:grid;
+    grid-gap: 5px;
+    max-width: 1000px;
+    width: 50%;
+    margin: 0 auto;
+    grid-template-areas:
+    "header-container header-container header-container header-container"
+    "current-search current-search current-search prev-searches"
+    "today tomorrow day-after prev-searches"
+}
+
+#header-container{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    grid-area: header-container;
+    background-color: rgb(66, 143, 146);
+    color:white;
+}
+
+#main{
+    border: 2px solid rgb(102, 190, 183);
+    grid-area: current-search;
+}
+
+#main > *{
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+#main-content-container{
+    background-color:rgb(248, 241, 233);
+}
+
+#previous-searches{
+    grid-area: prev-searches;
+    white-space: nowrap;
+}
+
+#todays-forecast-container{
+    grid-area: today;
+
+}
+
+#tomorrows-forecast-container{
+    grid-area: tomorrow;
+}
+
+#day-after-forecast-container{
+    grid-area: day-after;
+
+}
