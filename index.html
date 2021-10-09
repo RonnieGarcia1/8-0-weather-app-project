@@ -1,64 +1,58 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather App</title>
-        <link rel="stylesheet" href="main.css">
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <div id="main-wrapper">
-        <div id="header-container">
-            <h1>Weather App</h1>
-        <form id="user-input">
-        <label for="search-field">Pick a Location</label>
-        <input
-            type="text"
-            Placeholder=""
-            name="search" 
-        />
-        <input 
-            type="submit"
-            value="Get Weather">
-        </input>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="main-wrapper">
+    <div id="header-container">
+        <h1>Weather App</h1>
+    <form id="user-input">
+    <label for="search-field">Pick a Location</label>
+    <input
+        type="text"
+        Placeholder=""
+        name="search" 
+    />
+    <input 
+        type="submit"
+        value="Get Weather">
+    </input>
+</div>
+
+    <div class="display">
+        <div class="main-content-container">
+        Choose a location to view the weather.
+        </div>
+         
+        </div>
+    
+        <div id="todays-forecast-container">
+    
+        </div>
+    
+        <div id="tomorrows-forecast-container">
+    
+        </div>
+    
+        <div id="day-after-forecast-container">
     </div>
-
-        <main class="display">
-            <div class="main-content-container">
-            Choose a location to view the weather.
-            </div>
-        </main>
-        
-        <section class="history">
-            <section>
-                <h4>
-                    Previous Searches
-                </h4>
-            </section>
-            <ul>No previous searches.
-                <li>
-                    <a href="link.html">Melbourne - 37F</a>
-                </li>
-            </ul>
-        </section>
-        
-            <div id="todays-forecast-container">
-                <h3>Today</h3>
-                <div>Average Temp: 54F</div>
-                <div>Max Temp: 54F</div>
-                <div>MinTemp: 54F</div>
-            </div>
-
-            <div id="tomorrows-forecast-container">
-                <h3>Tomorrow</h3>
-               
-            </div>
-
-            <div id="day-after-forecast-container">
-                <h3>Day after tomorrow</h3>
-            </div>    
-        </div>  
-    </body>
-    </html>
+    
+    <div class="history">
+        <div>
+            <h4>Previous Searches</h4>
+        </div>
+        <ul>No previous searches.
+            <li>
+                <a href="link.html">Melbourne</a><span> -${Current Temperature}°F</span>
+            </li>
+        </ul>
+    </div>
+</div>  
+</body>
+</html>
