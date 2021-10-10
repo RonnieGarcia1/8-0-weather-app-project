@@ -6,9 +6,13 @@ body, html{
 
 }
 
-body{
-    max-width: 100%;
-    display:absolute;
+#header-container{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    grid-area: header;
+    background-color: teal;
+    color:white;
 }
 
 #main-wrapper{
@@ -18,55 +22,51 @@ body{
     grid-gap: 5px;
     max-width: 800px;
     grid-template-areas:
-    "header-container header-container header-container header-container"
-    "current-search current-search current-search prev-searches"
-    "today tomorrow day-after prev-searches"
-}
-
-#header-container{
-    padding: 10px;
-    text-align: center;
-    border: 2px solid black;
-    grid-area: header-container;
-    background-color: teal;
-    color:white;
+    "header header header header"
+    "display display display sidebar"
+    "display display display sidebar"
 }
 
 .display{
-    border: 2px solid rgb(102, 190, 183);
-    grid-area: current-search;
-    background-color:rgb(248, 241, 233);
-}
-
-.display > *{
+    grid-area: display;
+    background-color: white;
     padding: 5px;
     text-align: center;
-
+    display: grid;
+    grid-template-areas:
+    "content content content"
+    "today tomorrow day-after";
+    grid-gap: 5px;
 }
 
-.main-content-container{
+.main-display-container{
+    border: 2px solid rgb(102, 190, 183);
     background-color:rgb(248, 241, 233);
-    padding:50px;
+    padding: 50px;
+    grid-area: content;
 }
 
 .history{
-    grid-area: prev-searches;
+    grid-area: sidebar;
     white-space: nowrap;
 }
 
-#todays-forecast-container{
+.todays-forecast-container{
+    background-color: white;
     white-space: nowrap;
     text-align: center;
     grid-area: today;
 }
 
-#tomorrows-forecast-container{
+.tomorrows-forecast-container{
+    background-color: white;
     white-space: nowrap;
     text-align: center;
     grid-area: tomorrow;
 }
 
-#day-after-forecast-container{
+.day-after-forecast-container{
+    background-color: white;
     white-space: nowrap;
     text-align: center;
     grid-area: day-after;
