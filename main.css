@@ -23,12 +23,12 @@ h2{
     width: 100%;
     margin: 0 auto;
     display:grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     max-width: 800px;
     grid-template-areas:
     "header header header header"
     "display display display sidebar"
-    "display display display sidebar"
+    "display display display sidebar";
 }
 
 .display{
